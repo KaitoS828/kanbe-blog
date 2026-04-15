@@ -1,6 +1,7 @@
 import { JsonLd } from '@/components/JsonLd'
 import { localBusinessJsonLd } from '@/lib/seo'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'ゲストハウス日静 | プライベートサウナ付き一棟貸し・北海道広尾町',
@@ -155,12 +156,12 @@ export default function GuesthousePage() {
       </section>
 
       {/* CTA */}
-      <a
-        href="mailto:kaito.sekimoto8@gmail.com"
+      <Link
+        href="/contact"
         className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg text-sm hover:bg-gray-700 transition-colors"
       >
         予約・お問い合わせ
-      </a>
+      </Link>
     </>
   )
 }

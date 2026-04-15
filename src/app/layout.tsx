@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { SITE } from '@/lib/seo'
 
@@ -33,6 +34,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE.url,
   },
+  icons: { // icons プロパティを追加
+    icon: '/icon.jpg', // /app ディレクトリ直下の icon.jpg を指定
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -41,7 +45,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geist.className} bg-white text-gray-900 antialiased`}>
         <header className="border-b border-gray-100 py-4 px-6">
           <nav className="max-w-3xl mx-auto flex items-center justify-between">
-            <a href="/" className="font-bold text-xl">かんべblog</a>
+            <a href="/" className="font-bold text-xl flex items-center">
+              <img src="/images/icon.jpg" alt="かんべblogアイコン" className="w-8 h-8 rounded-full mr-2" />
+              かんべblog
+            </a>
             <div className="flex gap-6 text-sm text-gray-600">
               <a href="/blog" className="hover:text-gray-900">記事</a>
               <a href="/guesthouse" className="hover:text-gray-900">ゲストハウス</a>
@@ -58,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p>© 2026 神部凱斗 | 北海道広尾町</p>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   )

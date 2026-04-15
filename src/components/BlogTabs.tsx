@@ -88,28 +88,12 @@ export function BlogTabs({ posts }: Props) {
 
       {/* カテゴリタブ */}
       {tab === 'categories' && (
-        <div className="space-y-6">
+        <div className="flex flex-wrap gap-3">
           {categories.map(([tag, tagPosts]) => (
-            <section key={tag}>
-              <div className="flex items-center gap-2 mb-3">
-                <h2 className="text-sm font-semibold text-gray-700">{tag}</h2>
-                <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">{tagPosts.length}</span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {tagPosts.map(post => (
-                  <Link
-                    key={post.slug}
-                    href={`/blog/${post.slug}`}
-                    className="group block border border-gray-100 rounded-lg p-4 hover:border-gray-300 transition-colors"
-                  >
-                    <time className="text-xs text-gray-400" dateTime={post.date}>{post.date}</time>
-                    <h3 className="text-sm font-medium mt-1 group-hover:text-blue-600 transition-colors leading-snug">
-                      {post.title}
-                    </h3>
-                  </Link>
-                ))}
-              </div>
-            </section>
+            <div key={tag} className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-2">
+              <span className="text-sm text-gray-700">{tag}</span>
+              <span className="text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full">{tagPosts.length}</span>
+            </div>
           ))}
         </div>
       )}
