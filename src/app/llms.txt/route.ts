@@ -11,7 +11,7 @@ export async function GET() {
 > ${SITE.description}
 
 ## 著者
-- 名前: 関本海斗 (Kaito Sekimoto)
+- 名前: 神部凱斗 (Kaito Kambe)
 - 場所: 北海道広尾町（十勝地方）
 - 活動: ゲストハウス運営、AI開発、移住・地域活性化
 

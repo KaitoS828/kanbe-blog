@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'かんべblog — 北海道広尾町からの記録',
-  description: '北海道十勝・広尾町在住の関本海斗のブログ。移住、ゲストハウス運営、AI開発の記録。',
+  description: '北海道十勝・広尾町在住の神部凱斗のブログ。移住、ゲストハウス運営、AI開発の記録。',
 }
 
 export default function HomePage() {

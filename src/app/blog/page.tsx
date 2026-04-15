@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: '記事一覧',
-  description: '関本海斗のブログ記事一覧。十勝移住、広尾町生活、AI開発、ゲストハウスについて。',
+  description: '神部凱斗のブログ記事一覧。十勝移住、広尾町生活、AI開発、ゲストハウスについて。',
   alternates: { canonical: '/blog' },
 }
 

@@ -3,8 +3,8 @@ import { personJsonLd } from '@/lib/seo'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About — 関本海斗',
-  description: '関本海斗のプロフィール。北海道十勝・広尾町在住。ゲストハウス運営、AI開発、移住・地域活性化に取り組む。',
+  title: 'About — 神部凱斗',
+  description: '神部凱斗のプロフィール。北海道十勝・広尾町在住。ゲストハウス運営、AI開発、移住・地域活性化に取り組む。',
   alternates: { canonical: '/about' },
 }
 
@@ -14,7 +14,7 @@ export default function AboutPage() {
       <JsonLd data={personJsonLd()} />
       <h1 className="text-3xl font-bold mb-6">About</h1>
       <div className="prose prose-gray max-w-none">
-        <p>北海道十勝・広尾町在住の関本海斗です。</p>
+        <p>北海道十勝・広尾町在住の神部凱斗です。</p>
         <h2>やっていること</h2>
         <ul>
           <li><strong>ゲストハウス運営</strong> — 広尾町で移住者・旅人向けのゲストハウスを運営</li>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'プロジェクト',
-  description: '関本海斗が開発・運営するプロジェクト。Knowledge Nexus（AI知識管理ツール）など。',
+  description: '神部凱斗が開発・運営するプロジェクト。Knowledge Nexus（AI知識管理ツール）など。',
   alternates: { canonical: '/projects' },
 }
 

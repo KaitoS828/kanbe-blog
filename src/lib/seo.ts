@@ -1,7 +1,7 @@
 export const SITE = {
   name: 'かんべblog',
   url: 'https://kanbe-blog.vercel.app',
-  author: '関本海斗',
+  author: '神部凱斗',
   description: '北海道広尾町からの移住・地域活性化・ゲストハウス・AI開発の記録',
   locale: 'ja_JP',
   twitterHandle: '@kaito_hiroo',
@@ -23,8 +23,8 @@ export function buildJsonLd(type: string, data: Record<string, unknown>) {
 
 export function personJsonLd() {
   return buildJsonLd('Person', {
-    name: '関本海斗',
-    alternateName: 'Kaito Sekimoto',
+    name: '神部凱斗',
+    alternateName: 'Kaito Kambe',
     url: SITE.url,
     description: '北海道広尾町在住。ゲストハウス運営、AI開発（Knowledge Nexus）、地域活性化に取り組む。',
     email: 'kaito.sekimoto8@gmail.com',

@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <footer className="border-t border-gray-100 py-8 px-6 mt-20">
           <div className="max-w-3xl mx-auto text-center text-sm text-gray-400">
-            <p>© 2026 関本海斗 | 北海道広尾町</p>
+            <p>© 2026 神部凱斗 | 北海道広尾町</p>
           </div>
         </footer>
       </body>
