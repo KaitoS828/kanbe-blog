@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'かんべblog',
-  url: 'https://kanbe-blog.vercel.app',
+  url: 'https://blog.kaito-kanbe.com',
   author: '神部凱斗',
   description: '北海道広尾町からの移住・地域活性化・ゲストハウス・AI開発の記録',
   locale: 'ja_JP',
