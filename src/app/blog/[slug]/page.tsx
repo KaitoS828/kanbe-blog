@@ -27,20 +27,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.meta.description,
       publishedTime: post.meta.date,
       authors: [SITE.author],
-      images: [
-        {
-          url: '/images/icon.jpg',
-          width: 800,
-          height: 800,
-          alt: post.meta.title,
-        },
-      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.meta.title,
       description: post.meta.description,
-      images: ['/images/icon.jpg'],
     },
     alternates: { canonical: `/blog/${slug}` },
   }
