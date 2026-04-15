@@ -85,6 +85,22 @@ export default function GuesthousePage() {
         </div>
       </section>
 
+      {/* 料金 */}
+      <section className="mb-10">
+        <h2 className="text-xl font-semibold mb-4">料金</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div className="border border-gray-100 rounded-lg p-4">
+            <h3 className="font-semibold text-gray-700 mb-1">素泊まり</h3>
+            <p className="text-2xl font-bold text-gray-900">¥28,000<span className="text-sm font-normal text-gray-400"> / 棟・泊</span></p>
+          </div>
+          <div className="border border-gray-100 rounded-lg p-4 bg-gray-50">
+            <h3 className="font-semibold text-gray-700 mb-1">KOBU SAUNA付き</h3>
+            <p className="text-2xl font-bold text-gray-900">¥40,000<span className="text-sm font-normal text-gray-400"> / 棟・泊</span></p>
+          </div>
+        </div>
+        <p className="text-xs text-gray-400 mt-3">一棟貸し料金です。グループでのご利用がお得です。</p>
+      </section>
+
       {/* キャンセルポリシー */}
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-4">キャンセルポリシー</h2>
@@ -108,9 +124,9 @@ export default function GuesthousePage() {
       <section className="mb-10">
         <h2 className="text-xl font-semibold mb-4">周辺のおすすめ</h2>
         <div className="space-y-2 text-sm text-gray-600">
-          <p>🌊 <strong>黄金道路</strong> — 太平洋沿いの絶景ドライブルート（国道336号）</p>
-          <p>💧 <strong>フンベの滝</strong> — 海岸の断崖から流れ落ちる名瀑</p>
-          <p>⛩ <strong>広尾神社</strong> — 静かな境内でひと息</p>
+          <p><strong>黄金道路</strong> — 太平洋沿いの絶景ドライブルート（国道336号）</p>
+          <p><strong>フンベの滝</strong> — 海岸の断崖から流れ落ちる名瀑</p>
+          <p><strong>広尾神社</strong> — 静かな境内でひと息</p>
         </div>
       </section>
 
@@ -123,6 +139,19 @@ export default function GuesthousePage() {
           <li>ペット不可</li>
           <li>宿泊契約者以外の方の宿泊はお断りしています</li>
         </ul>
+      </section>
+
+      {/* SNS・外部リンク */}
+      <section className="mb-10">
+        <h2 className="text-xl font-semibold mb-4">SNS・掲載情報</h2>
+        <div className="flex flex-col gap-2 text-sm">
+          <a href="https://www.instagram.com/nissei_guesthouse/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 underline">
+            Instagram（ゲストハウス日静）@nissei_guesthouse
+          </a>
+          <a href="https://sauna-ikitai.com/saunas/113386" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900 underline">
+            サウナイキタイ掲載ページ
+          </a>
+        </div>
       </section>
 
       {/* CTA */}

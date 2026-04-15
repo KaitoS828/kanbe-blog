@@ -35,7 +35,7 @@ export function personJsonLd() {
       addressCountry: 'JP',
     },
     knowsAbout: ['移住', '北海道', '十勝', '広尾町', '地域おこし協力隊', 'AI開発', '地域活性化', 'DX支援', '地域通貨', 'Creative Developer'],
-    sameAs: ['https://github.com/KaitoS828', 'https://www.kaito-kanbe.com/'],
+    sameAs: ['https://github.com/KaitoS828', 'https://www.kaito-kanbe.com/', 'https://www.instagram.com/kaito___sk8/'],
   })
 }
 

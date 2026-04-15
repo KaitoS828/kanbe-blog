@@ -138,14 +138,20 @@
   "hotPaths": [
     {
       "path": "src/lib/seo.ts",
-      "accessCount": 6,
-      "lastAccessed": 1776233083533,
+      "accessCount": 7,
+      "lastAccessed": 1776233534497,
       "type": "file"
     },
     {
       "path": "content/blog/hello-hiroo.mdx",
       "accessCount": 5,
       "lastAccessed": 1776232312110,
+      "type": "file"
+    },
+    {
+      "path": "src/app/guesthouse/page.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1776233520239,
       "type": "file"
     },
     {
@@ -164,12 +170,6 @@
       "path": "src/app/projects/page.tsx",
       "accessCount": 2,
       "lastAccessed": 1776231829349,
-      "type": "file"
-    },
-    {
-      "path": "src/app/guesthouse/page.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776233043865,
       "type": "file"
     },
     {
