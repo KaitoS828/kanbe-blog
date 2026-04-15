@@ -1,9 +1,11 @@
 import { getPost, getAllPosts } from '@/lib/mdx'
 import { blogPostingJsonLd, SITE } from '@/lib/seo'
 import { JsonLd } from '@/components/JsonLd'
+import { ShareButtons } from '@/components/ShareButtons'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import type { Metadata } from 'next'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -35,6 +37,11 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPost(slug)
   if (!post) notFound()
 
+  const allPosts = getAllPosts()
+  const currentIndex = allPosts.findIndex(p => p.slug === slug)
+  const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null
+  const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null
+
   const jsonLd = blogPostingJsonLd({
     title: post.meta.title,
     description: post.meta.description,
@@ -60,7 +67,42 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="prose prose-gray max-w-none">
           <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         </div>
+        <div className="mt-12 pt-8 border-t border-gray-100">
+          <ShareButtons url={`${SITE.url}/blog/${slug}`} title={post.meta.title} />
+        </div>
       </article>
+
+      {/* 前後の記事ナビゲーション */}
+      <nav className="mt-12 grid grid-cols-2 gap-4">
+        <div>
+          {prevPost && (
+            <Link
+              href={`/blog/${prevPost.slug}`}
+              className="group flex flex-col gap-1 border border-gray-100 rounded-xl p-5 hover:border-gray-300 transition-colors h-full"
+            >
+              <span className="text-xs text-gray-400">← 前の記事</span>
+              <span className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
+                {prevPost.title}
+              </span>
+              <time className="text-xs text-gray-400 mt-auto pt-2">{prevPost.date}</time>
+            </Link>
+          )}
+        </div>
+        <div>
+          {nextPost && (
+            <Link
+              href={`/blog/${nextPost.slug}`}
+              className="group flex flex-col gap-1 border border-gray-100 rounded-xl p-5 hover:border-gray-300 transition-colors text-right h-full"
+            >
+              <span className="text-xs text-gray-400">次の記事 →</span>
+              <span className="text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
+                {nextPost.title}
+              </span>
+              <time className="text-xs text-gray-400 mt-auto pt-2">{nextPost.date}</time>
+            </Link>
+          )}
+        </div>
+      </nav>
     </>
   )
 }

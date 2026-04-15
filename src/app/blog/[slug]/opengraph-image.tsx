@@ -5,16 +5,25 @@ export const alt = 'かんべblog'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
+let cachedFont: ArrayBuffer | null = null
+
+async function getFont(): Promise<ArrayBuffer> {
+  if (!cachedFont) {
+    const res = await fetch(
+      'https://fonts.gstatic.com/s/notosansjp/v52/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.woff'
+    )
+    cachedFont = await res.arrayBuffer()
+  }
+  return cachedFont
+}
+
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const post = getPost(slug)
   const title = post?.meta.title ?? 'かんべblog'
   const date = post?.meta.date ?? ''
 
-  const fontRes = await fetch(
-    'https://fonts.gstatic.com/s/notosansjp/v52/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.woff'
-  )
-  const fontData = await fontRes.arrayBuffer()
+  const fontData = await getFont()
 
   return new ImageResponse(
     (
