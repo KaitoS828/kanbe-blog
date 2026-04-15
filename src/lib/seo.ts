@@ -26,7 +26,7 @@ export function personJsonLd() {
     name: '神部凱斗',
     alternateName: 'Kaito Kambe',
     url: SITE.url,
-    description: '北海道広尾町在住。ゲストハウス運営、AI開発、地域活性化に取り組む。',
+    description: '北海道広尾町で地域おこし協力隊として活動するCreative Developer。地域通貨・求人サイト構築、AI開発、DX支援に取り組む。',
     email: 'kaito.sekimoto8@gmail.com',
     address: {
       '@type': 'PostalAddress',
@@ -34,8 +34,8 @@ export function personJsonLd() {
       addressRegion: '北海道',
       addressCountry: 'JP',
     },
-    knowsAbout: ['移住', '北海道', '十勝', 'ゲストハウス', 'AI開発', '地域活性化'],
-    sameAs: ['https://github.com/KaitoS828'],
+    knowsAbout: ['移住', '北海道', '十勝', '広尾町', '地域おこし協力隊', 'AI開発', '地域活性化', 'DX支援', '地域通貨', 'Creative Developer'],
+    sameAs: ['https://github.com/KaitoS828', 'https://www.kaito-kanbe.com/'],
   })
 }
 

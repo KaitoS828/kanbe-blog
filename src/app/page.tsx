@@ -18,7 +18,7 @@ export default function HomePage() {
       <section className="mb-16">
         <h1 className="text-4xl font-bold mb-4">かんべblog</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
-          北海道十勝・広尾町在住。ゲストハウス運営、AI開発、移住・地域活性化について書いています。
+          北海道広尾町で地域おこし協力隊として活動するCreative Developer。AI開発、地域DX、移住のリアルについて書いています。
         </p>
       </section>
       <section>

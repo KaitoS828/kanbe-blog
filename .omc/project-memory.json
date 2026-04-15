@@ -138,26 +138,26 @@
   "hotPaths": [
     {
       "path": "src/lib/seo.ts",
-      "accessCount": 3,
-      "lastAccessed": 1776231818263,
+      "accessCount": 5,
+      "lastAccessed": 1776231998223,
       "type": "file"
     },
     {
       "path": "content/blog/hello-hiroo.mdx",
-      "accessCount": 3,
-      "lastAccessed": 1776231842648,
+      "accessCount": 4,
+      "lastAccessed": 1776232050957,
       "type": "file"
     },
     {
       "path": "src/app/page.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776231814432,
+      "accessCount": 3,
+      "lastAccessed": 1776232006045,
       "type": "file"
     },
     {
       "path": "src/app/about/page.tsx",
-      "accessCount": 2,
-      "lastAccessed": 1776231820867,
+      "accessCount": 3,
+      "lastAccessed": 1776232019272,
       "type": "file"
     },
     {
@@ -171,6 +171,12 @@
       "accessCount": 1,
       "lastAccessed": 1776231802980,
       "type": "directory"
+    },
+    {
+      "path": "content/blog/chiiki-currency-sapuri.mdx",
+      "accessCount": 1,
+      "lastAccessed": 1776232075104,
+      "type": "file"
     }
   ],
   "userDirectives": []
