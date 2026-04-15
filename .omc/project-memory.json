@@ -138,8 +138,14 @@
   "hotPaths": [
     {
       "path": "src/lib/seo.ts",
+      "accessCount": 9,
+      "lastAccessed": 1776256223336,
+      "type": "file"
+    },
+    {
+      "path": "src/app/page.tsx",
       "accessCount": 7,
-      "lastAccessed": 1776233534497,
+      "lastAccessed": 1776256168657,
       "type": "file"
     },
     {
@@ -155,9 +161,9 @@
       "type": "file"
     },
     {
-      "path": "src/app/page.tsx",
+      "path": "src/components/BlogTabs.tsx",
       "accessCount": 5,
-      "lastAccessed": 1776233634128,
+      "lastAccessed": 1776258250437,
       "type": "file"
     },
     {
@@ -179,9 +185,9 @@
       "type": "file"
     },
     {
-      "path": "src/components/BlogTabs.tsx",
+      "path": "src/app/layout.tsx",
       "accessCount": 2,
-      "lastAccessed": 1776234568578,
+      "lastAccessed": 1776255809415,
       "type": "file"
     },
     {
@@ -206,6 +212,18 @@
       "path": "content/blog/nissei-kobu-sauna.mdx",
       "accessCount": 1,
       "lastAccessed": 1776233067488,
+      "type": "file"
+    },
+    {
+      "path": "src/app/blog/[slug]/page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776254614487,
+      "type": "file"
+    },
+    {
+      "path": "src/app/blog/[slug]/opengraph-image.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776257813176,
       "type": "file"
     }
   ],

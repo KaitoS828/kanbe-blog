@@ -20,11 +20,20 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: SITE.name,
     description: SITE.description,
+    images: [
+      {
+        url: '/images/icon.jpg',
+        width: 800,
+        height: 800,
+        alt: SITE.name,
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: SITE.name,
     description: SITE.description,
+    images: ['/images/icon.jpg'],
   },
   robots: {
     index: true,
@@ -43,8 +52,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="border-b border-gray-100 py-4 px-6">
           <nav className="max-w-3xl mx-auto flex items-center justify-between">
             <a href="/" className="font-bold text-xl flex items-center">
-              <img src="/images/icon.jpg" alt="かんべblogアイコン" className="w-8 h-8 rounded-full mr-2" />
-              かんべblog
+              <img src="/images/icon.jpg" alt="かんべblogアイコン" className="w-8 h-8 rounded-full md:mr-2" />
+              <span className="hidden md:inline">かんべblog</span>
             </a>
             <div className="flex gap-6 text-sm text-gray-600">
               <a href="/blog" className="hover:text-gray-900">記事</a>
