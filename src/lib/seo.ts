@@ -41,14 +41,16 @@ export function personJsonLd() {
 
 export function localBusinessJsonLd() {
   return buildJsonLd('LodgingBusiness', {
-    name: '広尾町ゲストハウス',
-    description: '北海道広尾町のゲストハウス。移住者・旅人の拠点。',
-    url: SITE.url,
+    name: 'ゲストハウス日静',
+    alternateName: 'Guest House NISSEI',
+    description: '北海道広尾町音調津にある一棟貸しゲストハウス。プライベートサウナ「KOBU SAUNA」付き。昆布浜と日高山脈を望む静かな漁師町。',
+    url: `${SITE.url}/guesthouse`,
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '音調津733番地',
       addressLocality: '広尾町',
       addressRegion: '北海道',
-      postalCode: '089-2300',
+      postalCode: '089-2109',
       addressCountry: 'JP',
     },
     geo: {
@@ -56,8 +58,19 @@ export function localBusinessJsonLd() {
       latitude: SITE.location.latitude,
       longitude: SITE.location.longitude,
     },
-    telephone: '',
+    amenityFeature: [
+      { '@type': 'LocationFeatureSpecification', name: 'プライベートサウナ', value: true },
+      { '@type': 'LocationFeatureSpecification', name: '一棟貸し', value: true },
+      { '@type': 'LocationFeatureSpecification', name: '水風呂', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'キッチン', value: true },
+      { '@type': 'LocationFeatureSpecification', name: 'Wi-Fi', value: true },
+      { '@type': 'LocationFeatureSpecification', name: '駐車場', value: true },
+    ],
+    checkinTime: '15:00',
+    checkoutTime: '10:00',
+    petsAllowed: false,
     priceRange: '¥¥',
+    email: 'kaito.sekimoto8@gmail.com',
   })
 }
 

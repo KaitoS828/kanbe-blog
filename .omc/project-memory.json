@@ -138,8 +138,8 @@
   "hotPaths": [
     {
       "path": "src/lib/seo.ts",
-      "accessCount": 5,
-      "lastAccessed": 1776231998223,
+      "accessCount": 6,
+      "lastAccessed": 1776233083533,
       "type": "file"
     },
     {
@@ -167,6 +167,12 @@
       "type": "file"
     },
     {
+      "path": "src/app/guesthouse/page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776233043865,
+      "type": "file"
+    },
+    {
       "path": "",
       "accessCount": 1,
       "lastAccessed": 1776231802980,
@@ -182,6 +188,12 @@
       "path": "content/blog/hiroo-shigoto-chatbot.mdx",
       "accessCount": 1,
       "lastAccessed": 1776232761941,
+      "type": "file"
+    },
+    {
+      "path": "content/blog/nissei-kobu-sauna.mdx",
+      "accessCount": 1,
+      "lastAccessed": 1776233067488,
       "type": "file"
     }
   ],

@@ -18,7 +18,7 @@ export default function HomePage() {
       <section className="mb-16">
         <h1 className="text-4xl font-bold mb-4">かんべblog</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
-          北海道広尾町、人口5800人のところで地域おこし協力隊として活動しています。27歳。移住、ゲストハウス運営、狩猟、AI開発、IT導入支援など、日々の活動や学びを記録しています。mdファイルで書いているので、綺麗な画像などはありません。気になったら他のSNSを見てみてくださいね。
+          神部凱斗と申します。北海道広尾町、人口5800人。この地で地域おこし協力隊として活動しています。移住、ゲストハウス運営、狩猟、AI開発、IT導入支援など、日々の活動や学びを記録しています。mdファイルで書いているので、綺麗な画像などはありません。気になったら他のSNSを見てみてくださいね。
         </p>
       </section>
       <section>
