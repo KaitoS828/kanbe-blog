@@ -24,10 +24,10 @@ ${postLines}
 - [広尾町ゲストハウス](${SITE.url}/guesthouse): 北海道広尾町のゲストハウス。移住者・旅人の拠点。
 
 ### プロジェクト
-- [Knowledge Nexus](${SITE.url}/projects): AIを活用した知識管理ツール
+- [AI開発](${SITE.url}/projects): AIを活用した知識管理ツール
 
 ## キーワード
-十勝移住, 広尾町, 北海道移住, ゲストハウス, AI開発, 地域活性化, Knowledge Nexus
+十勝移住, 広尾町, 北海道移住, ゲストハウス, AI開発, 地域活性化, AI開発
 
 ## 更新情報
 最終更新: ${new Date().toISOString().split('T')[0]}

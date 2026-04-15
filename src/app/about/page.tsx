@@ -18,7 +18,7 @@ export default function AboutPage() {
         <h2>やっていること</h2>
         <ul>
           <li><strong>ゲストハウス運営</strong> — 広尾町で移住者・旅人向けのゲストハウスを運営</li>
-          <li><strong>AI開発</strong> — Knowledge Nexus（AI知識管理ツール）の開発</li>
+          <li><strong>AI開発</strong> — 様々なAIツール・サービスを開発。詳しくは <a href="https://github.com/KaitoS828" target="_blank" rel="noopener noreferrer">GitHub</a> を見てください。</li>
           <li><strong>地域活性化</strong> — 十勝・広尾町の魅力発信、移住支援</li>
         </ul>
         <h2>連絡先</h2>

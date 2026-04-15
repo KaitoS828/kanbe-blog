@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776231598211,
+  "projectRoot": "/Users/sekimotokaito/kanbe-blog",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "next",
+        "version": "16.2.3",
+        "category": "fullstack"
+      },
+      {
+        "name": "react",
+        "version": "19.2.4",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.4",
+        "category": "frontend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "scripts",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "content": {
+      "path": "content",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776231598125,
+      "keyFiles": []
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 7,
+      "lastAccessed": 1776231598126,
+      "keyFiles": [
+        "file.svg",
+        "globe.svg",
+        "llms-full.txt",
+        "llms.txt",
+        "next.svg"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 0,
+      "lastAccessed": 1776231598140,
+      "keyFiles": []
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 0,
+      "lastAccessed": 1776231598141,
+      "keyFiles": []
+    },
+    "src/app": {
+      "path": "src/app",
+      "purpose": "Application code",
+      "fileCount": 7,
+      "lastAccessed": 1776231598145,
+      "keyFiles": [
+        "favicon.ico",
+        "globals.css",
+        "layout.tsx"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 1,
+      "lastAccessed": 1776231598145,
+      "keyFiles": [
+        "JsonLd.tsx"
+      ]
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 2,
+      "lastAccessed": 1776231598146,
+      "keyFiles": [
+        "mdx.ts",
+        "seo.ts"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/lib/seo.ts",
+      "accessCount": 3,
+      "lastAccessed": 1776231818263,
+      "type": "file"
+    },
+    {
+      "path": "content/blog/hello-hiroo.mdx",
+      "accessCount": 3,
+      "lastAccessed": 1776231842648,
+      "type": "file"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776231814432,
+      "type": "file"
+    },
+    {
+      "path": "src/app/about/page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776231820867,
+      "type": "file"
+    },
+    {
+      "path": "src/app/projects/page.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1776231829349,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 1,
+      "lastAccessed": 1776231802980,
+      "type": "directory"
+    }
+  ],
+  "userDirectives": []
+}
