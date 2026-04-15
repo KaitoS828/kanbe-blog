@@ -2,7 +2,7 @@ export const SITE = {
   name: 'かんべblog',
   url: 'https://blog.kaito-kanbe.com',
   author: '神部凱斗',
-  description: '北海道広尾町音調津からの移住・地域活性化・ゲストハウス・AI開発の記録',
+  description: '北海道十勝・広尾町で地域おこし協力隊として活動する神部凱斗のブログ。人口5800人の漁師町への移住、一棟貸しゲストハウス「日静」の運営、LangGraph・Claude APIを使ったAI開発、狩猟まで。地域の日常と技術の記録。',
   locale: 'ja_JP',
   twitterHandle: '@kaito_hiroo',
   location: {

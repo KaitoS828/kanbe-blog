@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'かんべblog — 北海道広尾町からの記録',
-  description: '北海道十勝・広尾町在住の神部凱斗のブログ。移住、ゲストハウス運営、AI開発の記録。',
+  description: '北海道十勝・広尾町で地域おこし協力隊として活動する神部凱斗のブログ。人口5800人の漁師町への移住、一棟貸しゲストハウス「日静」の運営、LangGraph・Claude APIを使ったAI開発、狩猟まで。地域の日常と技術の記録。',
 }
 
 export default function HomePage() {
