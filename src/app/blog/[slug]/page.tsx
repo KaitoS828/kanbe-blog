@@ -34,7 +34,6 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
   const post = getPost(slug)
   if (!post) notFound()
-  console.log("MDX Content:", post.content) // デバッグ用に追加
 
   const jsonLd = blogPostingJsonLd({
     title: post.meta.title,
