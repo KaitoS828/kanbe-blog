@@ -2,7 +2,7 @@ export const SITE = {
   name: 'かんべblog',
   url: 'https://blog.kaito-kanbe.com',
   author: '神部凱斗',
-  description: '北海道広尾町からの移住・地域活性化・ゲストハウス・AI開発の記録',
+  description: '北海道広尾町音調津からの移住・地域活性化・ゲストハウス・AI開発の記録',
   locale: 'ja_JP',
   twitterHandle: '@kaito_hiroo',
   location: {
@@ -34,7 +34,7 @@ export function personJsonLd() {
       addressRegion: '北海道',
       addressCountry: 'JP',
     },
-    knowsAbout: ['移住', '北海道', '十勝', '広尾町', '地域おこし協力隊', 'AI開発', '地域活性化', 'DX支援', '地域通貨', 'Creative Developer'],
+    knowsAbout: ['移住', '北海道', '十勝', '広尾町', '地域おこし協力隊', 'AI開発', '地域活性化', 'DX支援', '地域通貨', 'Creative Developer', 'ゲストハウス'],
     sameAs: ['https://github.com/KaitoS828', 'https://www.kaito-kanbe.com/', 'https://www.instagram.com/kaito___sk8/'],
   })
 }
