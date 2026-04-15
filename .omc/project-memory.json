@@ -144,8 +144,8 @@
     },
     {
       "path": "content/blog/hello-hiroo.mdx",
-      "accessCount": 4,
-      "lastAccessed": 1776232050957,
+      "accessCount": 5,
+      "lastAccessed": 1776232312110,
       "type": "file"
     },
     {
@@ -176,6 +176,12 @@
       "path": "content/blog/chiiki-currency-sapuri.mdx",
       "accessCount": 1,
       "lastAccessed": 1776232075104,
+      "type": "file"
+    },
+    {
+      "path": "content/blog/hiroo-shigoto-chatbot.mdx",
+      "accessCount": 1,
+      "lastAccessed": 1776232761941,
       "type": "file"
     }
   ],
