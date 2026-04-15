@@ -34,9 +34,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: SITE.url,
   },
-  icons: { // icons プロパティを追加
-    icon: '/icon.jpg', // /app ディレクトリ直下の icon.jpg を指定
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
