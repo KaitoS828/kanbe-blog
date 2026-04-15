@@ -167,6 +167,12 @@
       "type": "file"
     },
     {
+      "path": "src/app/blog/page.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1776234306814,
+      "type": "file"
+    },
+    {
       "path": "src/app/projects/page.tsx",
       "accessCount": 2,
       "lastAccessed": 1776231829349,
@@ -194,6 +200,12 @@
       "path": "content/blog/nissei-kobu-sauna.mdx",
       "accessCount": 1,
       "lastAccessed": 1776233067488,
+      "type": "file"
+    },
+    {
+      "path": "src/components/BlogTabs.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1776234297231,
       "type": "file"
     }
   ],
