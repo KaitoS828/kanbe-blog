@@ -2,6 +2,7 @@ import { getPost, getAllPosts } from '@/lib/mdx'
 import { blogPostingJsonLd, SITE } from '@/lib/seo'
 import { JsonLd } from '@/components/JsonLd'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 
@@ -57,7 +58,7 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="text-gray-500 mt-3">{post.meta.description}</p>
         </header>
         <div className="prose prose-gray max-w-none">
-          <MDXRemote source={post.content} />
+          <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         </div>
       </article>
     </>
