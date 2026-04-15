@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import { SITE } from '@/lib/seo'
 
