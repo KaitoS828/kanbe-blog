@@ -62,26 +62,6 @@ export default function HomePage() {
           ) : (
             /* 別記事: モバイル縦積み / デスクトップ2列 */
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-              {/* 最新記事 */}
-              <div className="flex flex-col gap-3">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">最新記事</p>
-                <Link
-                  href={`/blog/${latest.slug}`}
-                  className="group block border border-gray-200 rounded-xl p-6 hover:border-gray-400 transition-colors"
-                >
-                  <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <time className="text-xs text-gray-400" dateTime={latest.date}>{latest.date}</time>
-                    {latest.tags?.slice(0, 2).map(tag => (
-                      <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
-                    ))}
-                  </div>
-                  <h2 className="text-xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
-                    {latest.title}
-                  </h2>
-                  <p className="text-sm text-gray-500 leading-relaxed">{latest.description}</p>
-                  <span className="mt-4 inline-block text-sm text-blue-600">続きを読む →</span>
-                </Link>
-              </div>
               {/* 注目記事 */}
               {featured && (
                 <div className="flex flex-col gap-3">
@@ -105,6 +85,26 @@ export default function HomePage() {
                   </Link>
                 </div>
               )}
+              {/* 最新記事 */}
+              <div className="flex flex-col gap-3">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">最新記事</p>
+                <Link
+                  href={`/blog/${latest.slug}`}
+                  className="group block border border-gray-200 rounded-xl p-6 hover:border-gray-400 transition-colors"
+                >
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <time className="text-xs text-gray-400" dateTime={latest.date}>{latest.date}</time>
+                    {latest.tags?.slice(0, 2).map(tag => (
+                      <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
+                    ))}
+                  </div>
+                  <h2 className="text-xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
+                    {latest.title}
+                  </h2>
+                  <p className="text-sm text-gray-500 leading-relaxed">{latest.description}</p>
+                  <span className="mt-4 inline-block text-sm text-blue-600">続きを読む →</span>
+                </Link>
+              </div>
             </div>
           )}
         </section>
