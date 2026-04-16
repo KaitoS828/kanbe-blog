@@ -1,6 +1,6 @@
 import { JsonLd } from '@/components/JsonLd'
 import { personJsonLd } from '@/lib/seo'
-import { getAllPosts } from '@/lib/mdx'
+import { getAllPosts, getFeaturedPost } from '@/lib/mdx'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -12,7 +12,12 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const posts = getAllPosts()
   const latest = posts[0]
-  const rest = posts.slice(1, 7)
+  const featured = getFeaturedPost()
+  const isSame = !!(latest && featured && latest.slug === featured.slug)
+
+  // 過去記事: 最新・注目を除いた残り
+  const excludeSlugs = new Set([latest?.slug, !isSame ? featured?.slug : undefined].filter(Boolean))
+  const rest = posts.filter(p => !excludeSlugs.has(p.slug)).slice(0, 6)
 
   return (
     <>
@@ -26,30 +31,86 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* 最新記事（大きく表示） */}
+      {/* 最新記事 + 注目記事 */}
       {latest && (
         <section className="mb-12">
-          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">最新記事</p>
-          <Link href={`/blog/${latest.slug}`} className="group block border border-gray-200 rounded-xl p-7 hover:border-gray-400 transition-colors">
-            <div className="flex flex-wrap items-center gap-3 mb-3">
-              <time className="text-xs text-gray-400" dateTime={latest.date}>{latest.date}</time>
-              {latest.tags?.slice(0, 2).map(tag => (
-                <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded whitespace-nowrap">{tag}</span>
-              ))}
-              {latest.tags && latest.tags.length > 2 && (
-                <span className="text-xs text-gray-400">...</span>
+          {isSame ? (
+            /* 同一記事: 赤ボーダーの1枚カード */
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">最新記事</p>
+                <span className="text-xs font-semibold text-red-500 uppercase tracking-widest">/ 注目記事</span>
+              </div>
+              <Link
+                href={`/blog/${latest.slug}`}
+                className="group block border border-red-200 rounded-xl p-7 hover:border-red-400 transition-colors"
+              >
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded font-semibold">注目</span>
+                  <time className="text-xs text-gray-400" dateTime={latest.date}>{latest.date}</time>
+                  {latest.tags?.slice(0, 2).map(tag => (
+                    <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
+                  ))}
+                </div>
+                <h2 className="text-2xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
+                  {latest.title}
+                </h2>
+                <p className="text-gray-500 leading-relaxed">{latest.description}</p>
+                <span className="mt-4 inline-block text-sm text-blue-600">続きを読む →</span>
+              </Link>
+            </div>
+          ) : (
+            /* 別記事: モバイル縦積み / デスクトップ2列 */
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+              {/* 最新記事 */}
+              <div className="flex flex-col gap-3">
+                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">最新記事</p>
+                <Link
+                  href={`/blog/${latest.slug}`}
+                  className="group block border border-gray-200 rounded-xl p-6 hover:border-gray-400 transition-colors"
+                >
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <time className="text-xs text-gray-400" dateTime={latest.date}>{latest.date}</time>
+                    {latest.tags?.slice(0, 2).map(tag => (
+                      <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
+                    ))}
+                  </div>
+                  <h2 className="text-xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
+                    {latest.title}
+                  </h2>
+                  <p className="text-sm text-gray-500 leading-relaxed">{latest.description}</p>
+                  <span className="mt-4 inline-block text-sm text-blue-600">続きを読む →</span>
+                </Link>
+              </div>
+              {/* 注目記事 */}
+              {featured && (
+                <div className="flex flex-col gap-3">
+                  <p className="text-xs font-semibold text-red-500 uppercase tracking-widest">注目記事</p>
+                  <Link
+                    href={`/blog/${featured.slug}`}
+                    className="group block border border-red-200 rounded-xl p-6 hover:border-red-400 transition-colors"
+                  >
+                    <div className="flex flex-wrap items-center gap-2 mb-3">
+                      <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded font-semibold">注目</span>
+                      <time className="text-xs text-gray-400" dateTime={featured.date}>{featured.date}</time>
+                      {featured.tags?.slice(0, 2).map(tag => (
+                        <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
+                      ))}
+                    </div>
+                    <h2 className="text-xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
+                      {featured.title}
+                    </h2>
+                    <p className="text-sm text-gray-500 leading-relaxed">{featured.description}</p>
+                    <span className="mt-4 inline-block text-sm text-blue-600">続きを読む →</span>
+                  </Link>
+                </div>
               )}
             </div>
-            <h2 className="text-2xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
-              {latest.title}
-            </h2>
-            <p className="text-gray-500 leading-relaxed">{latest.description}</p>
-            <span className="mt-4 inline-block text-sm text-blue-600">続きを読む →</span>
-          </Link>
+          )}
         </section>
       )}
 
-      {/* 過去の記事（カードグリッド） */}
+      {/* 過去の記事 */}
       {rest.length > 0 && (
         <section>
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">過去の記事</p>

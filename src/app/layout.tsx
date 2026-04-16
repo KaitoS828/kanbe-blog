@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import { SITE } from '@/lib/seo'
 
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
         </footer>
         <Analytics />
+        <GoogleAnalytics gaId="G-LLBSHZ4EE5" />
       </body>
     </html>
   )

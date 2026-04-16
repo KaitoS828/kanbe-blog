@@ -10,6 +10,7 @@ export interface PostMeta {
   tags: string[]
   offline_priority?: 'high' | 'medium' | 'low'
   category?: string
+  featured?: boolean
 }
 
 const CONTENT_DIR = path.join(process.cwd(), 'content/blog')
@@ -27,6 +28,11 @@ export function getAllPosts(): PostMeta[] {
       return { slug, ...data, date: dateString } as PostMeta
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+}
+
+export function getFeaturedPost(): PostMeta | null {
+  const posts = getAllPosts()
+  return posts.find(p => p.featured) ?? null
 }
 
 export function getPost(slug: string): { meta: PostMeta; content: string } | null {
