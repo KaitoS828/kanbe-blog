@@ -1,6 +1,7 @@
 import { JsonLd } from '@/components/JsonLd'
 import { personJsonLd } from '@/lib/seo'
 import { getAllPosts, getFeaturedPost } from '@/lib/mdx'
+import { TagList } from '@/components/TagList'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
@@ -45,12 +46,10 @@ export default function HomePage() {
                 href={`/blog/${latest.slug}`}
                 className="group block border border-red-200 rounded-xl p-7 hover:border-red-400 transition-colors"
               >
-                <div className="flex flex-wrap items-center gap-2 mb-3">
-                  <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded font-semibold">注目</span>
-                  <time className="text-xs text-gray-400" dateTime={latest.date}>{latest.date}</time>
-                  {latest.tags?.slice(0, 2).map(tag => (
-                    <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
-                  ))}
+                <div className="flex items-center gap-2 mb-3 overflow-hidden min-w-0">
+                  <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded font-semibold shrink-0">注目</span>
+                  <time className="text-xs text-gray-400 shrink-0" dateTime={latest.date}>{latest.date}</time>
+                  <TagList tags={latest.tags} />
                 </div>
                 <h2 className="text-2xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
                   {latest.title}
@@ -70,12 +69,10 @@ export default function HomePage() {
                     href={`/blog/${featured.slug}`}
                     className="group block border border-red-200 rounded-xl p-6 hover:border-red-400 transition-colors"
                   >
-                    <div className="flex flex-wrap items-center gap-2 mb-3">
-                      <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded font-semibold">注目</span>
-                      <time className="text-xs text-gray-400" dateTime={featured.date}>{featured.date}</time>
-                      {featured.tags?.slice(0, 2).map(tag => (
-                        <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
-                      ))}
+                    <div className="flex items-center gap-2 mb-3 overflow-hidden min-w-0">
+                      <span className="text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded font-semibold shrink-0">注目</span>
+                      <time className="text-xs text-gray-400 shrink-0" dateTime={featured.date}>{featured.date}</time>
+                      <TagList tags={featured.tags} />
                     </div>
                     <h2 className="text-xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
                       {featured.title}
@@ -92,11 +89,9 @@ export default function HomePage() {
                   href={`/blog/${latest.slug}`}
                   className="group block border border-gray-200 rounded-xl p-6 hover:border-gray-400 transition-colors"
                 >
-                  <div className="flex flex-wrap items-center gap-2 mb-3">
-                    <time className="text-xs text-gray-400" dateTime={latest.date}>{latest.date}</time>
-                    {latest.tags?.slice(0, 2).map(tag => (
-                      <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
-                    ))}
+                  <div className="flex items-center gap-2 mb-3 overflow-hidden min-w-0">
+                    <time className="text-xs text-gray-400 shrink-0" dateTime={latest.date}>{latest.date}</time>
+                    <TagList tags={latest.tags} />
                   </div>
                   <h2 className="text-xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
                     {latest.title}

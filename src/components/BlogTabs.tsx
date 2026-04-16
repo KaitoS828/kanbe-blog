@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import type { PostMeta } from '@/lib/mdx'
+import { TagList } from '@/components/TagList'
 
 type Props = { posts: PostMeta[] }
 
@@ -48,11 +49,9 @@ export function BlogTabs({ posts }: Props) {
             <section className="mb-10">
               <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">最新記事</p>
               <Link href={`/blog/${latest.slug}`} className="group block border border-gray-200 rounded-xl p-7 hover:border-gray-400 transition-colors">
-                <div className="flex items-center gap-3 mb-3">
-                  <time className="text-xs text-gray-400" dateTime={latest.date}>{latest.date}</time>
-                  {latest.tags?.map(tag => (
-                    <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">{tag}</span>
-                  ))}
+                <div className="flex items-center gap-2 mb-3 overflow-hidden min-w-0">
+                  <time className="text-xs text-gray-400 shrink-0" dateTime={latest.date}>{latest.date}</time>
+                  <TagList tags={latest.tags} />
                 </div>
                 <h2 className="text-2xl font-bold leading-snug mb-3 group-hover:text-blue-600 transition-colors">
                   {latest.title}
