@@ -61,7 +61,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
             flex: 1,
             alignItems: 'center',
             paddingTop: '32px',
-            paddingBottom: '32px',
+            paddingBottom: '56px',
           }}
         >
           <div

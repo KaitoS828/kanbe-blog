@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: Props) {
       <JsonLd data={jsonLd} />
       <article>
         <header className="mb-10">
-          <div className="flex items-center gap-2 mb-3 overflow-hidden min-w-0">
+          <div className="flex items-center gap-2 mb-6 overflow-hidden min-w-0">
             <time className="text-sm text-gray-400 shrink-0" dateTime={post.meta.date}>{post.meta.date}</time>
             <TagList tags={post.meta.tags} max={3} />
           </div>
