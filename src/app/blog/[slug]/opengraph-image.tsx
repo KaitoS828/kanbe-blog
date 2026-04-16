@@ -1,5 +1,7 @@
 import { ImageResponse } from 'next/og'
 import { getPost } from '@/lib/mdx'
+import { readFileSync } from 'fs'
+import { join } from 'path'
 
 export const alt = 'かんべblog'
 export const size = { width: 1200, height: 630 }
@@ -9,10 +11,8 @@ let cachedFont: ArrayBuffer | null = null
 
 async function getFont(): Promise<ArrayBuffer> {
   if (!cachedFont) {
-    const res = await fetch(
-      'https://fonts.gstatic.com/s/notosansjp/v52/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75vY0rw-oME.woff'
-    )
-    cachedFont = await res.arrayBuffer()
+    const fontPath = join(process.cwd(), 'public/fonts/NotoSansJP-Bold.woff')
+    cachedFont = readFileSync(fontPath).buffer as ArrayBuffer
   }
   return cachedFont
 }
