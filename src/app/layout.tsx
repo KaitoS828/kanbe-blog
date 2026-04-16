@@ -3,7 +3,8 @@ import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
-import { SITE } from '@/lib/seo'
+import { SITE, websiteJsonLd } from '@/lib/seo'
+import { JsonLd } from '@/components/JsonLd'
 
 const geist = Geist({ subsets: ['latin'] })
 
@@ -56,6 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body className={`${geist.className} bg-white text-gray-900 antialiased`}>
+        <JsonLd data={websiteJsonLd()} />
         <header className="border-b border-gray-100 py-4 px-6">
           <nav className="max-w-3xl mx-auto flex items-center justify-between">
             <a href="/" className="font-bold text-xl flex items-center">

@@ -74,6 +74,24 @@ export function localBusinessJsonLd() {
   })
 }
 
+export function websiteJsonLd() {
+  return buildJsonLd('WebSite', {
+    name: SITE.name,
+    url: SITE.url,
+    description: SITE.description,
+    inLanguage: 'ja',
+    author: {
+      '@type': 'Person',
+      name: SITE.author,
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${SITE.url}/blog?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
+  })
+}
+
 export function blogPostingJsonLd(meta: { title: string; description: string; date: string; slug: string; author: string }) {
   return buildJsonLd('BlogPosting', {
     headline: meta.title,
