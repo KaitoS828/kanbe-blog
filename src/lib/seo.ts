@@ -2,7 +2,7 @@ export const SITE = {
   name: 'かんべblog',
   url: 'https://blog.kaito-kanbe.com',
   author: '神部凱斗',
-  description: '北海道十勝・広尾町で地域おこし協力隊として活動する神部凱斗のブログ。人口5800人の漁師町への移住、一棟貸しゲストハウス「日静」の運営、LangGraph・Claude APIを使ったAI開発、狩猟まで。地域の日常と技術の記録。',
+  description: '北海道十勝・広尾町で地域おこし協力隊として活動する神部凱斗（かんべかいと）のブログ。人口5800人の漁師町への移住、一棟貸しゲストハウス「日静」の運営、LangGraph・Claude APIを使ったAI開発、狩猟まで。地域の日常と技術の記録。',
   locale: 'ja_JP',
   twitterHandle: '@kaito_hiroo',
   location: {
@@ -24,7 +24,7 @@ export function buildJsonLd(type: string, data: Record<string, unknown>) {
 export function personJsonLd() {
   return buildJsonLd('Person', {
     name: '神部凱斗',
-    alternateName: 'Kaito Kambe',
+    alternateName: ['Kaito Kambe', 'かんべかいと', '神部かいと', 'かんべ凱斗', '関本凱斗', '関本かいと', 'かんべ 広尾', '神部 広尾'],
     url: SITE.url,
     description: '北海道広尾町で地域おこし協力隊として活動するCreative Developer。地域通貨・求人サイト構築、AI開発、DX支援に取り組む。',
     email: 'kaito.sekimoto8@gmail.com',

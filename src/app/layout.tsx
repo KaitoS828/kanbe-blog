@@ -14,6 +14,12 @@ export const metadata: Metadata = {
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
+  keywords: [
+    '神部凱斗', 'かんべかいと', '神部かいと', '関本凱斗', '関本かいと',
+    '神部 広尾', '広尾町 神部', '広尾町 地域おこし協力隊',
+    '北海道 地域おこし協力隊', '広尾町', '地域おこし協力隊', '北海道',
+    'ゲストハウス日静', 'かんべblog',
+  ],
   openGraph: {
     type: 'website',
     locale: SITE.locale,
