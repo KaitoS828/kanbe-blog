@@ -72,7 +72,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="prose prose-gray max-w-none">
           <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         </div>
-        <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col items-center gap-6">
+        <div className="mt-12 pt-8 border-t border-gray-100 flex items-center gap-4">
           <LikeButton slug={slug} />
           <ShareButtons url={`${SITE.url}/blog/${slug}`} title={post.meta.title} />
         </div>
