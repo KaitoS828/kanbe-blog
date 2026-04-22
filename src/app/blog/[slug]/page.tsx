@@ -39,6 +39,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
+const SEED_LIKES: Record<string, number> = {
+  'hiroo-iju-1year': 5,
+  'hiroo-shigoto-ai-chatbot': 4,
+  'hiroo-town-appeal': 6,
+  'kobu-sauna-hiroo': 5,
+  'nissei-checkin-system': 3,
+  'nissei-guesthouse-open': 6,
+  'onchoutsu-tsunami-bousai': 2,
+  'sapuri-local-currency-hiroo': 4,
+  'tokachi-mainichi-newspaper': 3,
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
   const post = getPost(slug)
@@ -73,7 +85,7 @@ export default async function BlogPostPage({ params }: Props) {
           <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         </div>
         <div className="mt-12 pt-8 border-t border-gray-100 flex items-center gap-4">
-          <LikeButton slug={slug} />
+          <LikeButton slug={slug} defaultCount={SEED_LIKES[slug] ?? 0} />
           <ShareButtons url={`${SITE.url}/blog/${slug}`} title={post.meta.title} />
         </div>
       </article>

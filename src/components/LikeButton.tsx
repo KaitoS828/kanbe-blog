@@ -2,28 +2,30 @@
 
 import { useState, useEffect } from 'react'
 
-type Props = { slug: string }
+type Props = { slug: string; defaultCount?: number }
 
-export function LikeButton({ slug }: Props) {
+export function LikeButton({ slug, defaultCount = 0 }: Props) {
   const key = `like-${slug}`
   const [liked, setLiked] = useState(false)
-  const [count, setCount] = useState(0)
+  const [delta, setDelta] = useState(0)
 
   useEffect(() => {
     const stored = localStorage.getItem(key)
     if (stored) {
-      const { liked, count } = JSON.parse(stored)
+      const { liked, delta } = JSON.parse(stored)
       setLiked(liked)
-      setCount(count)
+      setDelta(delta ?? 0)
     }
   }, [key])
 
+  const count = defaultCount + delta
+
   function toggle() {
     const nextLiked = !liked
-    const nextCount = nextLiked ? count + 1 : Math.max(0, count - 1)
+    const nextDelta = nextLiked ? delta + 1 : delta - 1
     setLiked(nextLiked)
-    setCount(nextCount)
-    localStorage.setItem(key, JSON.stringify({ liked: nextLiked, count: nextCount }))
+    setDelta(nextDelta)
+    localStorage.setItem(key, JSON.stringify({ liked: nextLiked, delta: nextDelta }))
   }
 
   return (
