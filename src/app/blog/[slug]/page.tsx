@@ -3,6 +3,7 @@ import { blogPostingJsonLd, SITE } from '@/lib/seo'
 import { JsonLd } from '@/components/JsonLd'
 import { TagList } from '@/components/TagList'
 import { ShareButtons } from '@/components/ShareButtons'
+import { LikeButton } from '@/components/LikeButton'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import { notFound } from 'next/navigation'
@@ -71,7 +72,8 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="prose prose-gray max-w-none">
           <MDXRemote source={post.content} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
         </div>
-        <div className="mt-12 pt-8 border-t border-gray-100">
+        <div className="mt-12 pt-8 border-t border-gray-100 flex flex-col items-center gap-6">
+          <LikeButton slug={slug} />
           <ShareButtons url={`${SITE.url}/blog/${slug}`} title={post.meta.title} />
         </div>
       </article>
